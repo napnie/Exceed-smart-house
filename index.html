@@ -23,32 +23,49 @@
 
 <body>
     <div class="row">
-        <button class="col-md-4 col-md-offset-1">Auto</button>
-        <button class="btn" disabled> <span class="glyphicon glyphicon-remove col-xs-2" aria-hidden="true" ></span> </button>
-        <button class="col-md-4">Manual</button>
-    </div>
-    <div class="row">
-        <div class="col-md-4 col-md-offset-2">เปิดไฟ</div>
+        <div class="col-md-4 col-md-offset-2">Automation</div>
         <div class="col-md-4">
-            <label class="switch">
-                <input type="checkbox">
+            <label class="switch col-md-4">
+                    <input id="auto-switch" type="checkbox" onclick='autoClick(this)'>
+                    <span class="slider round"></span>
+            </label>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-md-4 col-md-offset-2">Light</div>
+        <div class="col-md-4">
+            <label class="switch col-md-4">
+                <input id="light-switch" type="checkbox" onclick='lightClick(this)'>
                 <span class="slider round"></span>
             </label>
-            <button disabled class="btn"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
         </div>
     </div>
+    <hr>
     <div class="row">
-        <div class="col-md-4 col-md-offset-2">แอร์</div>
+        <div class="col-md-4 col-md-offset-2">Air-Condition</div>
         <div class="col-md-4">
-            <button class="col-md-2 btn btn-success">on</button>
-            <button class="col-md-2 btn btn-danger">off</button>
-            <button disabled class="btn"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+            <label class="switch col-md-4">
+                <input id="air-switch" type="checkbox"  onclick='airClick(this)'>
+                <span class="slider round"></span>
+            </label>
         </div>
     </div>
+    <hr>
     <div class="row">
-        <div class="col-md-4 col-md-offset-2">อุณหภูมิ</div>
+        <div class="col-md-4 col-md-offset-2">Door</div>
+        <div class="col-md-4">
+            <label class="switch col-md-4">
+                <input id="door-switch" type="checkbox"  onclick='doorClick(this)'>
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-md-4 col-md-offset-2">Temperature</div>
         <div id="temperature" class="col-md-3"></div>
-        <p class="col-md-1">°C</p>
+        <div class="col-md-1">°C</div>
     </div>
 </body>
 
